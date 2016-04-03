@@ -1,0 +1,25 @@
+{
+    "appKeys": {},
+    "capabilities": [
+        ""
+    ],
+    "companyName": "sasha.makarava@gmail.com",
+    "enableMultiJS": true,
+    "longName": "CountDown",
+    "projectType": "native",
+    "resources": {
+        "media": []
+    },
+    "sdkVersion": "3",
+    "shortName": "CDown",
+    "targetPlatforms": [
+        "aplite",
+        "basalt",
+        "chalk"
+    ],
+    "uuid": "0bc6d3e0-4dc0-469b-9c93-9b416d13bf71",
+    "versionLabel": "1.0",
+    "watchapp": {
+        "watchface": true
+    }
+}
