@@ -46,6 +46,23 @@ static void calc_next() {
   }
 }
 
+//can watchfaces still have like, app bits?
+//probably not, that seems like it'd wind up a bad joke
+//wait how do the times get changed then
+//oh no
+//i see the issue now
+//i guess id be weirded out if the clock app on my phone needed
+//me to use anything but a widget for full functionality
+//but at the same time i have no idea what is supposed to be weird on pebbles
+//or smartwatches for that matter
+//whoa, im behind on the times again
+//ugh
+//who needs options i guess in this thing whose usefuleness relies entirely on being able
+//to adjust it to personal preferences
+//no one needs those
+//hhaha
+// :'(
+
 static void update_time() {
   time_t temp = time(NULL);
   struct tm *tick_time = localtime(&temp);
