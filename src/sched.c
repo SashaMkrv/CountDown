@@ -30,6 +30,11 @@ typedef struct Schedule {
 }
 
 
+//NO
+//THERES STORAGE
+//NOOOOOOOOOOOO
+//MY DREAMS WERE DASHED
+//BUT IT WAS I WHO DID THE DEED
 
 */
 #endif
