@@ -71,7 +71,7 @@ static void update_time() {
   static char s_buffer_prev[8];
   static char s_buffer_next[8];
   
-  strftime(s_buffer, sizeof(s_buffer), clock_is_24h_style() ? "%H:%M":"%I:%M", tick_time);
+  strftime(s_buffer, sizeof(s_buffer), clock_is_24h_style() ? "%k:%M":"%l:%M", tick_time);
   
   bool bigMin;
   if (prev_min < 10) bigMin = false;
@@ -166,11 +166,11 @@ static void main_window_load(Window *window) {
   s_time_layer = layer_create(GRect(0, 0, bounds.size.w/2, bounds.size.h));
   
   s_prev_time_layer = text_layer_create(
-    GRect(20, bounds.size.h/2-18 -20, bounds.size.w/2-24, 18));
+    GRect(20, bounds.size.h/2 - 18 - 16, bounds.size.w/2-24, 18));
   s_curr_time_layer = text_layer_create(
-    GRect(0, bounds.size.h/2 - 18, bounds.size.w/2-3, 30));
+    GRect(0, bounds.size.h/2 - 20, bounds.size.w/2-3, 30));
   s_next_time_layer = text_layer_create(
-    GRect(20, bounds.size.h/2 + 14, bounds.size.w/2-24, 18));
+    GRect(20, bounds.size.h/2 + 7, bounds.size.w/2-24, 18));
   
   text_layer_set_background_color(s_curr_time_layer, GColorClear);
   text_layer_set_background_color(s_next_time_layer, GColorClear);
@@ -225,6 +225,17 @@ static void init() {
   endTime = malloc(sizeof(T));
   *startTime = (T) {8, 30};
   *endTime = (T) {19, 0};
+  //T increment = (T) {1, 30};
+  
+  /*uint32_t end_time = endTime->hours*100 + endTime->mins;
+  uint32_t writing_time = startTime->hours*100 + startTime->mins;
+  persist_write_int(2, writing_time);
+  uint8_t block = 2;
+  while (writing_time != end_time){
+    block = block + 1;
+    writing_time = writing_time + 130;
+    persist_write_int(block, writing_time);
+  }*/
   
   update_time();
   
